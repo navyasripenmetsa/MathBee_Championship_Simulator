@@ -1,4 +1,4 @@
-# 🧠 Math-Bee Championship — C Programming Project 🎮
+# 🧠 Math-Bee Championship - C Programming Project 🎮
 
 ## 📌 Overview
 
