@@ -1,40 +1,116 @@
-Matrix Calculator Overview and Execution Guide
-Overview:
-This C program serves as a matrix calculator capable of performing various operations on matrices. It includes functionalities such as addition, subtraction, multiplication, scalar multiplication, transpose, and calculating the trace of a matrix. Users can interact with the program through the console interface by selecting the desired operation and providing input matrices.
+# 🧠 Math-Bee Championship — C Programming Project 🎮
 
-Execution Guide:
-Compiling the Program:
+## 📌 Overview
 
-Ensure that you have a C compiler installed on your system.
-Compile the program using the following command:
-Copy code
-gcc matrix_calculator.c -o matrix_calculator
-This command will generate an executable file named matrix_calculator.
-Running the Program:
+**Math-Bee Championship** is a console-based math quiz game developed in **C**. The program generates random math questions from different topics and difficulty levels, evaluates user answers, and calculates a score based on performance.
 
-Execute the compiled program by running the following command:
-bash
-Copy code
-./matrix_calculator
-This will start the matrix calculator application.
-Using the Matrix Calculator:
+This project demonstrates core **C programming**, **problem-solving**, and **mathematical logic implementation**.
 
-Upon running the program, you will be presented with a menu displaying available operations.
-Choose the desired operation by entering the corresponding symbol or keyword.
-For Addition: Enter +
-For Subtraction: Enter -
-For Multiplication: Enter *
-For Scalar Multiplication: Enter ScalarMultiplication
-For Transpose: Enter Transpose
-For Trace: Enter Trace
-Follow the prompts to input the dimensions and elements of the matrices.
-Depending on the selected operation, the program will perform the computation and display the result.
-Validations:
+---
 
-The program performs validations on matrix dimensions to ensure compatibility for certain operations (e.g., addition, subtraction, multiplication).
-Ensure to input valid dimensions (positive integers) for matrices.
-If invalid dimensions are provided, the program will display an error message and terminate.
-Termination:
+## ✨ Features
 
-Once the operation is completed, the program will terminate.
-You can rerun the program to perform additional matrix operations as needed.
+* Four difficulty levels: **Easy, Medium, Difficult, Expert**
+* Randomly generated questions each time the program runs 🔄
+* Multiple math topics covered:
+
+  * ➕ Basic Arithmetic
+  * 📘 Linear Equations
+  * 📈 AP & GP
+  * 🔺 Quadratic Equations
+  * 📐 Geometry (Area problems)
+  * 🔁 Unit Conversions
+  * 🧩 Logical Riddles
+  * 🎲 Probability
+  * 📉 Differentiation
+  * ∫ Integration
+* 🏆 Score calculation system
+* ⌨️ User input-based interactive gameplay
+* 🔷 ASCII shape drawing for geometry questions
+* 🔊 **Beep sound alert for incorrect answers** using `Beep()` from `windows.h`
+
+---
+
+## 💻 Programming Concepts Used
+
+| Concept                  | Description                                       |
+| ------------------------ | ------------------------------------------------- |
+| Functions                | Separate functions for each type of question      |
+| Pointers                 | Score updated using pointer variables             |
+| Arrays                   | Used for storing questions, answers, coefficients |
+| Strings                  | Used for player name and level selection          |
+| Random Numbers           | `rand()` used to generate random questions        |
+| Math Functions           | `pow()`, `sqrt()`, `roundf()`                     |
+| Conditional Statements   | `if`, `switch`                                    |
+| Loops                    | `for`, `while`                                    |
+| Modular Programming      | Large program divided into smaller functions      |
+| Floating Point Precision | EPSILON used for decimal comparison               |
+
+---
+
+## 🎯 Difficulty Levels
+
+### 🟢 Easy Level
+
+* Addition, subtraction, multiplication
+* Division
+* Simple linear equations
+
+### 🟡 Medium Level
+
+* Arithmetic expressions
+* System of equations
+* Geometry area problems
+* Unit conversions
+* Logical riddles
+
+### 🔴 Difficult Level
+
+* Arithmetic Progression (AP)
+* Geometric Progression (GP)
+* Quadratic equations
+* Logical riddles
+
+### ⚫ Expert Level
+
+* Probability
+* Last digit of powers
+* Polynomial differentiation
+* Polynomial integration
+
+---
+
+## ▶️ How to Compile and Run
+
+### Compile
+
+```bash
+gcc math_bee.c -o math_bee -lm
+```
+
+### Run
+
+```bash
+./math_bee
+```
+
+> ⚠️ Note: The program uses `windows.h` for sound (`Beep()`), so it works best on Windows.
+
+---
+
+## 🧠 Skills Demonstrated
+
+* C Programming
+* Problem Solving
+* Mathematical Algorithm Implementation
+* Modular Programming
+* Use of Pointers and Arrays
+* Random Number Logic
+* User Interaction via Console
+
+---
+
+## 🏁 Conclusion
+
+**Math-Bee Championship** is a multi-level math quiz game that demonstrates strong fundamentals in **C programming, logic building, and mathematical computation**. This project is suitable for academic submission and placement portfolio as it shows structured programming and problem-solving ability.
+
