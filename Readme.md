@@ -1,6 +1,6 @@
 # Math-Bee Championship
 
-A console-based mathematics quiz application built in C that tests players across four progressive difficulty levels — from basic arithmetic to calculus. The game covers a broad range of mathematical topics and is designed to challenge students at multiple stages of learning.
+A console-based mathematics quiz application built in C that tests players across four progressive difficulty levels - from basic arithmetic to calculus. The game covers a broad range of mathematical topics and is designed to challenge students at multiple stages of learning.
 
 ---
 
