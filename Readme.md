@@ -1,116 +1,133 @@
-# 🧠 Math-Bee Championship - C Programming Project 🎮
+# Math-Bee Championship
 
-## 📌 Overview
-
-**Math-Bee Championship** is a console-based math quiz game developed in **C**. The program generates random math questions from different topics and difficulty levels, evaluates user answers, and calculates a score based on performance.
-
-This project demonstrates core **C programming**, **problem-solving**, and **mathematical logic implementation**.
+A console-based mathematics quiz application built in C that tests players across four progressive difficulty levels — from basic arithmetic to calculus. The game covers a broad range of mathematical topics and is designed to challenge students at multiple stages of learning.
 
 ---
 
-## ✨ Features
+## Overview
 
-* Four difficulty levels: **Easy, Medium, Difficult, Expert**
-* Randomly generated questions each time the program runs 🔄
-* Multiple math topics covered:
-
-  * ➕ Basic Arithmetic
-  * 📘 Linear Equations
-  * 📈 AP & GP
-  * 🔺 Quadratic Equations
-  * 📐 Geometry (Area problems)
-  * 🔁 Unit Conversions
-  * 🧩 Logical Riddles
-  * 🎲 Probability
-  * 📉 Differentiation
-  * ∫ Integration
-* 🏆 Score calculation system
-* ⌨️ User input-based interactive gameplay
-* 🔷 ASCII shape drawing for geometry questions
-* 🔊 **Beep sound alert for incorrect answers** using `Beep()` from `windows.h`
+Math-Bee Championship presents randomized math problems to a single player and evaluates answers in real time. Each difficulty level targets a distinct set of mathematical concepts, and the scoring system reflects the complexity of each level. The application runs entirely in the terminal with no external dependencies beyond the standard C libraries and the Windows API.
 
 ---
 
-## 💻 Programming Concepts Used
+## Features
 
-| Concept                  | Description                                       |
-| ------------------------ | ------------------------------------------------- |
-| Functions                | Separate functions for each type of question      |
-| Pointers                 | Score updated using pointer variables             |
-| Arrays                   | Used for storing questions, answers, coefficients |
-| Strings                  | Used for player name and level selection          |
-| Random Numbers           | `rand()` used to generate random questions        |
-| Math Functions           | `pow()`, `sqrt()`, `roundf()`                     |
-| Conditional Statements   | `if`, `switch`                                    |
-| Loops                    | `for`, `while`                                    |
-| Modular Programming      | Large program divided into smaller functions      |
-| Floating Point Precision | EPSILON used for decimal comparison               |
+- Four difficulty levels with distinct question categories
+- Randomized problem generation to ensure a unique experience on every run
+- Real-time answer validation with score tracking
+- Explanations provided for incorrect answers in select question types
+- Named player session with a final score reported at the end of each level
 
 ---
 
-## 🎯 Difficulty Levels
+## Difficulty Levels
 
-### 🟢 Easy Level
+### Easy
+Intended for foundational arithmetic practice.
 
-* Addition, subtraction, multiplication
-* Division
-* Simple linear equations
+- Addition, subtraction, and multiplication of two-digit integers
+- Integer division with guaranteed whole-number results
+- Single-variable linear equations
 
-### 🟡 Medium Level
+### Medium
+Covers applied mathematics and introduces multi-step reasoning.
 
-* Arithmetic expressions
-* System of equations
-* Geometry area problems
-* Unit conversions
-* Logical riddles
+- Order of operations (BODMAS) with mixed arithmetic expressions
+- Simultaneous linear equations with two unknowns
+- Area calculation for six geometric shapes: square, rectangle, triangle, parallelogram, rhombus, and hexagon
+- Unit conversion problems across time, length, mass, volume, and currency
+- Mathematical riddles requiring logical deduction
 
-### 🔴 Difficult Level
+### Difficult
+Targets secondary-school level topics.
 
-* Arithmetic Progression (AP)
-* Geometric Progression (GP)
-* Quadratic equations
-* Logical riddles
+- Arithmetic progressions: finding the nth term given the first term and common difference
+- Geometric progressions: finding the nth term given the first term and common ratio
+- Quadratic equations: solving for both real roots
+- Multi-step mathematical riddles
 
-### ⚫ Expert Level
+### Expert
+Designed for advanced problem-solving.
 
-* Probability
-* Last digit of powers
-* Polynomial differentiation
-* Polynomial integration
+- Combinatorics-based probability problems with pre-computed answers
+- Last-digit problems using modular exponentiation
+- Polynomial differentiation: evaluating the derivative of a degree-5 polynomial at a given point
+- Polynomial integration: computing the definite integral of a degree-5 polynomial
 
 ---
 
-## ▶️ How to Compile and Run
+## Technical Details
 
-### Compile
+| Property | Detail |
+|---|---|
+| Language | C (C99 standard) |
+| Platform | Windows (uses `windows.h` for audio feedback) |
+| Compiler | GCC / MinGW recommended |
+| Dependencies | `stdio.h`, `stdlib.h`, `math.h`, `string.h`, `time.h`, `stdbool.h`, `windows.h` |
+
+### Problem Generation
+
+All numerical parameters are generated using seeded pseudorandom number generation via `srand(time(NULL))`. For questions involving algebra, the application constructs the problem by working backwards from a known answer — for example, quadratic problems are built from two randomly selected roots, and simultaneous equations are built from a known solution pair. This guarantees that every generated problem has a valid, integer solution.
+
+### Scoring
+
+| Level | Points per Correct Answer |
+|---|---|
+| Easy | 30 per arithmetic question, up to 150 total |
+| Medium | 50 per question, up to 250 total |
+| Difficult | 65 per question, up to 260 total |
+| Expert | 85 per question, up to 340 total |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- A C compiler with Windows API support (GCC via MinGW or MSVC)
+- Windows operating system (required for `Beep()` and `windows.h`)
+
+### Build
 
 ```bash
-gcc math_bee.c -o math_bee -lm
+gcc mathbee.c -o mathbee -lm
 ```
 
 ### Run
 
 ```bash
-./math_bee
+./mathbee
 ```
 
-> ⚠️ Note: The program uses `windows.h` for sound (`Beep()`), so it works best on Windows.
+On launch, enter the player name and select a difficulty level by typing one of the following:
+
+```
+EASY
+MEDIUM
+DIFFICULT
+EXPERT
+```
 
 ---
 
-## 🧠 Skills Demonstrated
+## Project Structure
 
-* C Programming
-* Problem Solving
-* Mathematical Algorithm Implementation
-* Modular Programming
-* Use of Pointers and Arrays
-* Random Number Logic
-* User Interaction via Console
+```
+mathbee.c           # Single-file application containing all logic
+```
+
+All question generation, answer evaluation, score management, and output are contained within a single source file. Functions are organized by category: arithmetic, geometry, unit conversion, sequences, equations, probability, and calculus.
 
 ---
 
-## 🏁 Conclusion
+## Known Limitations
 
-**Math-Bee Championship** is a multi-level math quiz game that demonstrates strong fundamentals in **C programming, logic building, and mathematical computation**. This project is suitable for academic submission and placement portfolio as it shows structured programming and problem-solving ability.
+- Windows-only due to the use of `Beep()` from `windows.h`. Removing or stubbing out the `Beep()` calls makes the code portable to Linux and macOS.
+- The riddle question bank is static. Adding new riddles requires modifying the source arrays directly.
+- The probability question bank uses pre-computed floating-point answers matched with a tolerance of 0.001, which may require adjustment for edge cases.
 
+---
+
+## License
+
+This project is for educational and portfolio purposes.
