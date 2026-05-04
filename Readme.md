@@ -130,4 +130,5 @@ All question generation, answer evaluation, score management, and output are con
 
 ## License
 
-This project is for educational and portfolio purposes.
+This project is protected under "All Rights Reserved".
+Unauthorized copying, modification, or distribution is strictly prohibited.
